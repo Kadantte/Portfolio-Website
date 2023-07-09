@@ -4,6 +4,8 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
+}
+html{
   scroll-behavior:smooth;
 }
 a{
@@ -169,7 +171,8 @@ profile-photo .img{
  /*---------------------------About---------------------------*/
 
 .about-area{
-  padding-top: 130px;
+  padding-top: 15px;
+  margin-top: 80px;
   background-color: #202020;
 }
 .about{
@@ -382,7 +385,7 @@ profile-photo .img{
 
 /*---------------------------Contact Me---------------------------*/
 .contact-content{
-  padding: 100px 0;
+  padding: 100px 0 140px;
   color: #fff;
   text-align: center;
 }
@@ -414,7 +417,8 @@ profile-photo .img{
   font-size: 18px;
 }
 .contact .submit:hover{
-  transform: scale(1.1);
+  background-color: #e6c200;
+  box-shadow: 0 4px 15px rgba(254, 215, 0, 0.4);
   cursor: pointer;
 }
 #msg{
@@ -491,9 +495,29 @@ profile-photo .img{
 
   .header .menu_icon {
     display: block;
+    z-index: 100;
   }
   .header ul{
     display: none;
+  }
+  .header ul.active{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .header ul.active li{
+    margin: 15px 0;
+  }
+  .header ul.active li a{
+    font-size: 22px;
   }
   .header i{
     color: #e5e5e5;
